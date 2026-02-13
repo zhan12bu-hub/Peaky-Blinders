@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peaky Blinders</title>
+  <!-- 引入你的CSS文件，路径按实际来 -->
+  <link rel="stylesheet" href="flux.css">
+  <!-- 引入字体（原模板的字体，必须加，否则样式乱） -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- 引入Font Awesome图标库（解决卡片图标显示问题） -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- 引入Font Awesome图标库（必须加，否则播放图标不显示） -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 新增的首屏逐字动画层（单独放在最外层，不要嵌套） -->
+  <div class="splash-screen">
+    <div class="typing-text"></div>
+  </div>
+
+  <!-- 原有所有内容全部包裹到这个容器里！！！ -->
+<div class="main-content">
+    <!-- 原有加载层（保留） -->
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <div class="loader-prism">
+          <div class="prism-face"></div>
+          <div class="prism-face"></div>
+          <div class="prism-face"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 原有导航header -->
+    <header class="header" id="header">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <div class="logo-prism">
+              <div class="prism-shape"></div>
+            </div>
+          </div>
+          <div class="logo-text">
+            <span class="prism">Peaky</span>
+            <span class="flux">Blinders</span>
+          </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active">Characters</a></li>
+          <li><a href="#philosophy" class="nav-link">Our Story</a></li>
+          <li><a href="#stats" class="nav-link">Iconic Scenes</a></li>
+          <li><a href="#skills" class="nav-link">❤️</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+   <section class="hero" id="hero">
+  <div class="carousel-container">
+    <!-- 轮播指示器（自动生成圆点，无需手动改） -->
+    <div class="carousel-indicators" id="cardIndicators"></div>
+    
+    <!-- 卡片轮播容器（核心ID：cardCarousel） -->
+    <div class="carousel" id="cardCarousel">
+      <!-- 1. Thomas Shelby -->
+      <div class="hero-card carousel-item">
+        <img src="images/thomas4.jpg" alt="Thomas Shelby" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Thomas Shelby</h3>
+          <p class="hero-card-desc">The strategic mastermind and undisputed leader of the Shelby family. A war veteran haunted by his past, driven by unbreakable loyalty to his kin.</p>
+          <div class="hero-card-tags">
+            <span>FAMILY HEAD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Arthur Shelby -->
+      <div class="hero-card carousel-item">
+        <img src="images/arthur.jpg" alt="Arthur Shelby" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Arthur Shelby</h3>
+          <p class="hero-card-desc">The volatile and fiercely loyal enforcer of the Peaky Blinders. Tommy’s most trusted (and dangerous) right-hand man, tormented by his inner demons.</p>
+          <div class="hero-card-tags">
+            <span>ENFORCER</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Polly Gray -->
+      <div class="hero-card carousel-item">
+        <img src="images/Polly.jpeg" alt="Polly Gray" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Polly Gray</h3>
+          <p class="hero-card-desc">The matriarch and moral compass of the Shelby family. A shrewd strategist who holds the family together with wit and unyielding steel.</p>
+          <div class="hero-card-tags">
+            <span>STRATEGIST</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. John Shelby -->
+      <div class="hero-card carousel-item">
+        <img src="images/john.jpg" alt="John Shelby" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">John Shelby</h3>
+          <p class="hero-card-desc">The impulsive and passionate younger brother. Struggles to balance family loyalty with a desire for a quiet life, leading to tragic consequences.</p>
+          <div class="hero-card-tags">
+            <span>IMPULSIVE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Ada Shelby -->
+      <div class="hero-card carousel-item">
+        <img src="images/Ada.jpg" alt="Ada Shelby" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Ada Shelby</h3>
+          <p class="hero-card-desc">The rebellious and idealistic sister. Rejects the family’s criminal ties, pursues politics and activism, yet remains deeply connected to her roots.</p>
+          <div class="hero-card-tags">
+            <span>REBELLIOUS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Michael Gray -->
+      <div class="hero-card carousel-item">
+        <img src="images/michael.jpg" alt="Michael Gray" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Michael Gray</h3>
+          <p class="hero-card-desc">Polly’s son and Tommy’s ambitious cousin. Raised away from the family, he returns hungry for power, becoming a dangerous rival to Tommy.</p>
+          <div class="hero-card-tags">
+            <span>AMBITION</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Finn Shelby -->
+      <div class="hero-card carousel-item">
+        <img src="images/Finn2.jpg" alt="Finn Shelby" class="hero-card-img">
+        <div class="hero-card-content">
+          <h3 class="hero-card-title">Finn Shelby</h3>
+          <p class="hero-card-desc">The youngest Shelby brother. Eager to prove himself, reckless and easily manipulated, struggling to find his place in the family’s shadow.</p>
+          <div class="hero-card-tags">
+            <span>RECKLESS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 轮播控制按钮（ID匹配JS：cardPrevBtn/cardNextBtn） -->
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="cardPrevBtn">‹</button>
+      <button class="carousel-btn" id="cardNextBtn">›</button>
+    </div>
+  </div>
+</section>
+
+    
+<section class="philosophy-section" id="philosophy">
+  <!-- 顶部引言（保留） -->
+  <div class="section-header">
+    <h2>Hey now you've met our family members.</h2>
+    <p>Each of us carries our own mark, our own weight. We've all known pain and joy, in our own way.</p>
+  </div>
+
+  <!-- 两列网格：把philosophy-grid改成philosophy-pillars，保留philosophy-grid--two-col -->
+  <div class="philosophy-pillars philosophy-grid--two-col">
+    <!-- 卡片1：MY FAMILY 把philosophy-card改成pillar -->
+    <div class="pillar">
+      <div class="pillar-icon"> <!-- 把philosophy-icon改成pillar-icon -->
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3 class="pillar-title">MY FAMILY</h3> <!-- 新增pillar-title类，匹配CSS -->
+      <p class="pillar-description">Arthur, with his rage and his fragile heart; Polly, sharp as a blade, holding us all together when we'd fall apart; John, burning bright and too fast; Ada, fighting for a world we could never be part of; Michael, hungry for more than we could give him; Finn, lost in the shadow of brothers he could never live up to… and me? I've just been trying to keep the name Shelby from breaking. We bleed, we lie, we betray, just to survive. Just like anyone else in this dirty world.</p>
+    </div>
+
+    <!-- 卡片2：OUR STORY 同样修改类名 -->
+    <div class="pillar">
+      <div class="pillar-icon">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h3 class="pillar-title">OUR STORY</h3>
+      <p class="pillar-description">This isn't a story for praise. It isn't a story for forgiveness. It's just… us. If somewhere deep down, you understand even a little of what we've been through… that's enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 优化版：Memorable Scenes互动卡片区 -->
+<section class="scenes-section" id="stats">
+  <div class="section-header">
+    <h2 class="section-title">Memorable Scenes</h2>
+    <p class="section-subtitle">Click to watch the iconic moments of Peaky Blinders</p>
+  </div>
+
+  <div class="scenes-grid">
+    <!-- 卡片1：Tommy & Grace's Wedding -->
+    <div class="scene-card">
+      <div class="scene-card-header">
+        <h3 class="scene-card-title">Tommy & Grace's Wedding</h3>
+        <p class="scene-card-desc">A fleeting moment of happiness</p>
+      </div>
+      <div class="scene-image-container">
+        <img src="images/wedding5.jpg" alt="Tommy & Grace's Wedding" class="scene-image">
+        <div class="scene-prompt">
+          <i class="fas fa-play-circle"></i> Click to watch
+        </div>
+      </div>
+      <div class="scene-video-container">
+       <iframe class="scene-video" 
+        src="https://www.youtube.com/embed/Rf4VNv3Et4c?si=nupKL7DoaXmjUG4c" 
+        allowfullscreen 
+        allow="autoplay; encrypted-media"></iframe>
+        <button class="scene-reset-btn">← Back to Scene</button>
+      </div>
+    </div>
+
+    <!-- 卡片2：Ada's Parliament Speech -->
+    <div class="scene-card">
+      <div class="scene-card-header">
+        <h3 class="scene-card-title">Ada's Best Moments</h3>
+        <p class="scene-card-desc">Fight!</p>
+      </div>
+      <div class="scene-image-container">
+        <img src="images/ada5.jpg" alt="Ada's Parliament Speech" class="scene-image">
+        <div class="scene-prompt">
+          <i class="fas fa-play-circle"></i> Click to watch
+        </div>
+      </div>
+      <div class="scene-video-container">
+         <iframe class="scene-video" 
+        src="https://www.youtube.com/embed/7gAZrFMdJGY?si=qcclKSBVGClXSi7O"
+        allowfullscreen 
+        allow="autoplay; encrypted-media"></iframe>
+        <button class="scene-reset-btn">← Back to Scene</button>
+      </div>
+    </div>
+
+    <!-- 卡片3：Tommy's Family Meeting (S6) -->
+    <div class="scene-card">
+      <div class="scene-card-header">
+        <h3 class="scene-card-title">Polly's Best Moments</h3>
+        <p class="scene-card-desc">Fight!</p>
+      </div>
+      <div class="scene-image-container">
+        <img src="images/polly2.jpg" alt="Tommy's Family Meeting" class="scene-image">
+        <div class="scene-prompt">
+          <i class="fas fa-play-circle"></i> Click to watch
+        </div>
+      </div>
+      <div class="scene-video-container">
+        <iframe class="scene-video" 
+        src="https://www.youtube.com/embed/sRHg2RNvI8w?si=T-tnRpQo1hyKdzJ3"
+        allowfullscreen 
+        allow="autoplay; encrypted-media"></iframe>
+        <button class="scene-reset-btn">← Back to Scene</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 原有skills区 -->
+    <section class="skills-section" id="skills">
+      <div class="skills-container">
+        <div class="section-header">
+          <h2 class="section-title">Why I love Peaky Blinders so much?</h2>
+          <p class="section-subtitle">Peaky Blinders has been with me through so many tough times. Back then, I was depressed, listless, and had lost all my fighting spirit. But watching the Shelby family strive and fight their way through everything made me feel like I wasn't alone. I'm truly grateful for the strength and encouragement this show has given me. I love it so much, and I highly recommend you watch it too!</p>
+        </div>
+        <div class="skill-categories">
+          <div class="category-tab active" data-category="all">❤️</div>
+          <div class="category-tab" data-category="frontend">❤️</div>
+          <div class="category-tab" data-category="backend">❤️</div>
+          <div class="category-tab" data-category="cloud">❤️</div>
+          <div class="category-tab" data-category="emerging">❤️</div>
+        </div>
+        <div class="skills-hexagon-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+
+    <!-- 原有contact区 -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p>25474286@life.hkbu.edu.hk</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>+852 69353954
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>Hong Kong, China</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 原有footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo logo">
+            <div class="logo-icon">
+              <div class="logo-prism">
+                <div class="prism-shape"></div>
+              </div>
+            </div>
+            <div class="logo-text">
+              <span class="prism">Peaky</span>
+              <span class="flux">Blinders</span>
+            </div>
+          </a>
+          <p class="footer-description">Nice to meet you!</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon">🔵</a>
+            <a href="#" class="social-icon">𝕏</a>
+            <a href="#" class="social-icon">📸</a>
+            <a href="#" class="social-icon">🔗</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>🀄️</h4>
+          <div class="footer-links">
+            <a href="#hero">🀄️</a>
+            <a href="#philosophy">🀄️</a>
+            <a href="#stats">🀄️</a>
+            <a href="#skills">🀄️</a>
+            <a href="#contact">🀄️</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>🫶🏻</h4>
+          <div class="footer-links">
+            <a href="#">🫶🏻</a>
+            <a href="#">🫶🏻</a>
+            <a href="#">🫶🏻</a>
+            <a href="#">🫶🏻</a>
+            <a href="#">🫶🏻</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>❤️</h4>
+          <div class="footer-links">
+            <a href="#">❤️</a>
+            <a href="#">❤️</a>
+            <a href="#">❤️</a>
+            <a href="#">❤️</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">© 2026 Wang Zihan. All rights reserved.</div>
+        <div class="footer-credits">Designed by <a href="https://templatemo.com" target="_blank">Wang Zihan</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 引入你的JS文件，路径按实际来 -->
+  <script src="scripts.js"></script>
+</body>
+</html>
